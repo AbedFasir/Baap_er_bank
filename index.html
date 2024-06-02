@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Baap er Bank</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <section>
+      <h1 class="text-5xl text-center mt-8">Welcome to your <span class="text-indigo-600 font-semibold">Baap er Bank!!!</span></h1>
+
+      <div class="bg-sky-200 mt-12 p-8 space-y-6 w-6/12 mx-auto flex flex-col items-center justify-center rounded-lg">
+        
+         <h2 class="text-4xl font-medium text-center">Please Login</h2>
+         <input class="block p-2 w-7/12 mx-auto text-lg" type="email" name="" id="user-email" placeholder="Enter Email">
+         <input class="block p-2 w-7/12 mx-auto text-lg" type="password" name="" id="user-password" placeholder="Enter Password">
+         <button id="submit" class="bg-violet-500 hover:bg-violet-600 text-white py-2 px-5 rounded-lg font-semibold">Submit</button>
+
+      </div>
+   </section>
+
+   <script>
+      document.getElementById('submit').addEventListener('click', function () {
+         const get_email = document.getElementById('user-email');
+         const email = get_email.value;
+
+         const get_password = document.getElementById('user-password');
+         const password = get_password.value;
+
+         get_email.value = '';
+         get_password.value = '';
+
+         if(email == 'mdgantai@gmail.com' && password == 'abed') {
+            window.location.href = 'bank.html';
+         }
+         else {
+            alert('The Email or Password you entered is incorrect')
+         }
+      })
+   </script>
+</body>
+</html>
